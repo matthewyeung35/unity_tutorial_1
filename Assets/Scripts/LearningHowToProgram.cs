@@ -19,6 +19,8 @@ public class LearningHowToProgram : MonoBehaviour
     private BoxCollider2D myCollider;
     private AudioSource audioSource;
     private Animator anim;
+    private Transform myTransform;
+    
 
     private void Start() {
 
@@ -85,7 +87,11 @@ public class LearningHowToProgram : MonoBehaviour
 
         myBody = GetComponent<Rigidbody2D>();
         audioSource = GetComponent<AudioSource>();
-   
+        audioSource.Play();
+
+        myTransform = transform;
+        myTransform.position = new Vector3(20,20,30);
+        
     }
     
     float addingTwoNumbers(float a, float b){
